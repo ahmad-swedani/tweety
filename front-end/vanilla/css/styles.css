@@ -1,0 +1,37 @@
+/* Bootstrap customization */
+:root {
+  --bs-primary: rgba(29, 161, 242, 1);
+}
+a {
+  color: var(--bs-primary);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/* Floating label input */
+.form-group .form-control--tall {
+  height: 4em;
+  font-size: 1em;
+  padding-top: 1.2em;
+}
+
+.form-group .floating-label {
+  position: absolute;
+  padding: 1em;
+  cursor: text;
+  transform: translateY(-3.8em);
+  transition: all 0.1s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1em var(--bs-primary);
+}
+
+.form-control:focus + .floating-label {
+  transform: translateY(-5.3em);
+  color: var(--bs-primary);
+  font-size: 0.8em;
+}
